@@ -82,12 +82,12 @@ public:
 
         if (ptr!= NULL)
         {
+            inorder(ptr->leftchild);
             cout << ptr->info << " ";
-            preprder(ptr->leftchild);
-            preorder(ptr->rightchild);
+            inorder(ptr->rightchild);
         }
     }
 
-    
+
 };
 
