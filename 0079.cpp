@@ -44,5 +44,12 @@ public:
             ROOT = newNode; // Mark the new node as ROOT
             return;         // Exit
         }
+
+        if (element>parent->info)
+        {
+            parent->leftchild = newNode;
+        }
+
+        
     }
 };
