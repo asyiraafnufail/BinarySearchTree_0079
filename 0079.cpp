@@ -42,17 +42,23 @@ public:
         if (parent == NULL) // If the parent is NULL (Tree is empty)
         {
             ROOT = newNode; // Mark the new node as ROOT
-            return; // Exit
+            return;         // Exit
         }
 
-        if (element>parent->info)
+        if (element > parent->info)
         {
             parent->leftchild = newNode; // Make the left child of the parent point to the new node
         }
 
-        else if (element>parent->info) // if the value in the data field of the new node is greater than that of the parent
+        else if (element > parent->info) // if the value in the data field of the new node is greater than that of the parent
         {
             parent->rightchild = newNode; // make the right child of the parent point to the new node
         }
+    }
+
+    void search(string element, Node *& parent, Node*& currentNode)
+    {
+        currentNode = ROOT;
+        parent = NULL;
     }
 };
