@@ -72,7 +72,7 @@ public:
         }
     }
 
-    void inorder(Node* ptr)
+    void inorder(Node *ptr)
     {
         if (ROOT == NULL)
         {
@@ -80,7 +80,7 @@ public:
             return;
         }
 
-        if (ptr!= NULL)
+        if (ptr != NULL)
         {
             inorder(ptr->leftchild);
             cout << ptr->info << " ";
@@ -88,7 +88,7 @@ public:
         }
     }
 
-    void preorder(Node* ptr)
+    void preorder(Node *ptr)
     {
         if (ROOT == NULL)
         {
@@ -96,12 +96,27 @@ public:
             return;
         }
 
-        if (ptr!= NULL)
+        if (ptr != NULL)
         {
             cout << ptr->info << " ";
             preorder(ptr->leftchild);
             preorder(ptr->rightchild);
         }
     }
-};
 
+    void postorder(Node *ptr)
+    {
+        if (ROOT == NULL)
+        {
+            cout << "Tree is empty" << endl;
+            return;
+        }
+
+        if (ptr != NULL)
+        {
+            postorder(ptr->leftchild);
+            postorder(ptr->rightchild);
+            cout << ptr->info << " ";
+        }
+    }
+};
